@@ -122,6 +122,7 @@
 						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 							<div class="row">
 								{% for food in foods %}
+								<a href = {% url 'detail-food' food.id %}>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
 										<img src="{{food.image.url}}" class="img-fluid" alt="Image">
@@ -132,6 +133,7 @@
 										</div>
 									</div>
 								</div>
+								</a>
 								{% endfor %}	
 							</div>
 							
@@ -141,6 +143,7 @@
 								
 								{% for food in foods %}
 								{% if food.category.name == "Drinks" %}
+								<a href = {% url 'detail-food' food.id %}>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
 										<img src="{{food.image.url}}" class="img-fluid" alt="Image">
@@ -151,6 +154,7 @@
 										</div>
 									</div>
 								</div>
+							</a>
 								{% endif %}
 								{% endfor %}
 							</div>
@@ -160,7 +164,7 @@
 							<div class="row">
 								{% for food in foods %}
 								{% if food.category.name == "Lunch" %}
-								
+								<a href = {% url 'detail-food' food.id %}>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
 										<img src="{{food.image.url}}" class="img-fluid" alt="Image">
@@ -171,6 +175,7 @@
 										</div>
 									</div>
 								</div>
+							</a>
 								{% endif %}
 								{% endfor %}
 							</div>
@@ -179,6 +184,7 @@
 							<div class="row">
 								{% for food in foods %}
 								{% if food.category.name == "Dinner" %}
+								<a href = {% url 'detail-food' food.id %}>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
 										<img src="{{food.image.url}}" class="img-fluid" alt="Image">
@@ -189,6 +195,7 @@
 										</div>
 									</div>
 								</div>
+							</a>
 								{% endif %}
 								{% endfor %}
 							</div>

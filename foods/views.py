@@ -8,3 +8,10 @@ def index(req):
     return render(req, "foods/index.html",{
         "foods": foods
     })
+
+def detail(req, id_food):
+    foods = models.food.objects.get(id=id_food)
+    print(foods)
+    return render(req, "foods/detail.html",{
+        "food" : foods
+    })
